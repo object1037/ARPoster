@@ -6,8 +6,8 @@ html {
 
 #poster {
 	position: absolute;
-	width: 200vw;
-	height: 300vh;
+	width: 400vw;
+	height: 350vh;
     background-color: #333333;
 	color: #f7f7f7;
     z-index: -50;

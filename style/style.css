@@ -7,7 +7,7 @@ html {
 #poster {
 	position: absolute;
 	width: 200%;
-	height: 280%;
+	height: 300%;
     background-color: #333333;
 	color: #f7f7f7;
     z-index: -50;

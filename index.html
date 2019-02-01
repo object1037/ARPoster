@@ -11,23 +11,29 @@
 		<link rel="stylesheet" href="style/style.css"
 	</head>
 	<body>
-    	<a-scene embedded arjs='debugUIEnabled:false;' vr-mode-ui="enabled: false">
-            <div id="poster">
-                <h1 class="header">ARポスター</h1>
-                <h2 class="author">73回 object</h2>
-                <div class="maintext">
-                    <h3>このポスターについて</h3>
-                    <p>このARポスターではAR.jsという技術を使って壁に貼ったマーカーを認識し、その上にHTMLで記述した内容をARで表示しています。</p>
-                    <h3>WebARについて</h3>
-                    <p>AR.js等を使ったWebARはARKit等を使ったネイティブアプリと比べて、ブラウザからアクセスするだけで体験できるという手軽さが利点です。</p>
-                </div>
-            </div>
-            
+		<div id="poster">
+			<h1 class="header">ARポスター</h1>
+			<h2 class="author">73回 object</h2>
+			<div class="maintext">
+				<h3>このポスターについて</h3>
+				<p>
+					皆さんこんにちは、objectです。このARポスターではAR.jsという技術を使って壁に貼ったマーカーを認識し、その上にARでポスターを表示しています。
+				</p>
+				<h3>AR.jsについて</h3>
+				<p>
+					AR.jsはJavaSctiptフレームワークの一つで、これを使うことによりARをWeb上で体験することができます。
+				</p>
+				<h3>Webであることの利点</h3>
+				<p>
+					AR.js等を使ったWebでのARはARKit等を使ったネイティブアプリと比べて、アプリをインストールする必要がなく、Webサイトにアクセスするだけで体験できるという手軽さが利点です。
+				</p>
+			</div>
+		</div>
+		<a-scene embedded arjs='debugUIEnabled:false;' vr-mode-ui="enabled: false">
 			<a-marker preset="hiro">
-        		<a-plane width="1" height="1" rotation="-90 0 0" material="shader:html; target: #poster"></a-plane>
-  			</a-marker>
-
+				<a-plane width="1" height="1.4" rotation="-90 0 0" material="shader:html; target: #poster"></a-plane>
+			</a-marker>
 			<a-entity camera></a-entity>
-    	</a-scene>
-  	</body>
+		</a-scene>
+	</body>
 </html>

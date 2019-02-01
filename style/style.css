@@ -1,13 +1,13 @@
 html {
 	height: 100vh;
-	width: 100vh;
+	width: 100vw;
 	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
 }
 
 #poster {
 	position: absolute;
-	width: 200%;
-	height: 300%;
+	width: 200vw;
+	height: 300vh;
     background-color: #333333;
 	color: #f7f7f7;
     z-index: -50;

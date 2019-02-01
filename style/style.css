@@ -6,40 +6,39 @@ html {
 
 #poster {
 	position: absolute;
-	width: 500px;
-	height: 700px;
-	font-size: 500%;
+	width: 1500px;
+	height:2100px;
     background-color: #FFF;
     z-index: -50;
 }
 
 #poster .header {
     position: absolute;
-    margin: 20px;
+    margin: 60px;
     left: 0;
     right: 0;
-    font-size: 36px;
+    font-size: 108px;
     text-align: center;
 }
 
 #poster .author {
     position: absolute;
-    font-size: 20px;
-    left: 350px;
-    top: 70px;
+    font-size: 60px;
+    left: 1050px;
+    top: 210px;
 }
 
 #poster .maintext {
     position: absolute;
-    font-size: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    top: 140px;
+    font-size: 60px;
+    margin-left: 60px;
+    margin-right: 60px;
+    top: 420px;
 }
 
 .maintext > p {
-    margin-bottom: 30px;
-    margin-top: 10px;
+    margin-bottom: 90px;
+    margin-top: 30px;
 }
 
 .maintext > h3 {

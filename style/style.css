@@ -10,6 +10,7 @@ html {
 	height: 2800px;
     background-color: #fafafa;
     z-index: -50;
+	left: calc(50% - 1400px);
 }
 
 #poster .header {

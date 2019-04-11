@@ -6,40 +6,39 @@ html {
 
 #poster {
 	position: absolute;
-	width: 2000px;
-	height: 2800px;
+	width: 2000px; /* 2000*/
+	height: 2800px; /* 2800*/
     background-color: #fafafa;
     z-index: -50;
-	left: calc(50% - 1400px);
 }
 
 #poster .header {
     position: absolute;
-    margin: 80px;
+    margin: 80px; /*80 */
     left: 0;
     right: 0;
-    font-size: 144px;
+    font-size: 144px; /* 144*/
     text-align: center;
 }
 
 #poster .author {
     position: absolute;
-    font-size: 80px;
-    left: 1400px;
-    top: 280px;
+    font-size: 80px; /* 80*/
+    left: 1400px; /* 1400*/
+    top: 280px; /*280 */
 }
 
 #poster .maintext {
     position: absolute;
-    font-size: 80px;
-    margin-left: 80px;
-    margin-right: 80px;
-    top: 560px;
+    font-size: 80px; /* 80*/
+    margin-left: 80px; /* 80*/
+    margin-right: 80px; /* 80*/
+    top: 560px; /* 560*/
 }
 
 .maintext > p {
-    margin-bottom: 120px;
-    margin-top: 40px;
+    margin-bottom: 120px; /* 120*/
+    margin-top: 40px; /* 40*/
 	font-family: 'Noto Serif JP', serif;
 }
 

@@ -21,7 +21,12 @@
 		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP|Noto+Serif+JP" rel="stylesheet">
 	</head>
 	<body>
-		<div id="poster">
+		</div>
+		<a-scene embedded arjs='debugUIEnabled:false;' vr-mode-ui="enabled: false">
+			<a-marker preset="custom" type="pattern" url="pattern-marker.patt">
+				<a-plane width="1.5" height="2.1" rotation="-90 0 0" material="shader: html; target: #poster"></a-plane>
+			</a-marker>
+			<div id="poster">
 			<h1 class="header">ARポスター</h1>
 			<h2 class="author">73回 object</h2>
 			<div class="maintext">
@@ -38,11 +43,6 @@
 					AR.js等を使ったWebでのARはARKit等を使ったネイティブアプリと比べて、アプリをインストールする必要がなく、Webサイトにアクセスするだけで体験できるという手軽さが利点です。
 				</p>
 			</div>
-		</div>
-		<a-scene embedded arjs='debugUIEnabled:false;' vr-mode-ui="enabled: false">
-			<a-marker preset="custom" type="pattern" url="pattern-marker.patt">
-				<a-plane width="1.5" height="2.1" rotation="-90 0 0" material="shader: html; target: #poster"></a-plane>
-			</a-marker>
 			<a-entity camera></a-entity>
 		</a-scene>
 	</body>

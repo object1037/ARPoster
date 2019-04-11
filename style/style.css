@@ -1,7 +1,7 @@
 html {
-	height: 2800px;
-	width: 200px;
-	font-family: 'Noto Sans JP', sans-serif;
+	height: 100%;
+	width: 100%;
+	font-family: 'Noto Sans JP';
 }
 
 #poster {
@@ -39,7 +39,7 @@ html {
 .maintext > p {
     margin-bottom: 120px; /* 120*/
     margin-top: 40px; /* 40*/
-	font-family: 'Noto Serif JP', serif;
+	font-family: 'Noto Serif JP';
 }
 
 .maintext > h3 {

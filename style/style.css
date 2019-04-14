@@ -4,18 +4,6 @@ html {
 	font-family: 'Noto Sans JP';
 }
 
-@font-face {
-	font-family: 'Noto Sans JP';
-	font-style: normal;
-	font-weight: normal;
-}
-
-@font-face {
-	font-family: 'Noto Serif JP';
-	font-style: normal;
-	font-weight: normal;
-}
-
 #poster {
 	position: absolute;
 	width: 2000px; /* 2000*/

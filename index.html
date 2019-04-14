@@ -35,7 +35,7 @@
 				},
 				active: function()
 				{
-					reloadCheck();
+					//reloadCheck();
 				}
 			});
 			
@@ -45,8 +45,9 @@
 			AFRAME.registerComponent('registerevents', {
 				init: function () {
             		var marker = this.el;
-
+				
             		marker.addEventListener('markerFound', function () {
+						reloadCheck();
                 		var markerId = marker.id;
                 		document.querySelector('#cylinder').emit('markerfound');
 						setTimeout("markerfoundplane()", 3500);

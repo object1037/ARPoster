@@ -11,7 +11,7 @@
   			gtag('config', 'UA-99895430-2');
 		</script>
 		<meta charset="utf=8">
-		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
 		<title>ARPoster</title>
 		<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
 		<script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
@@ -19,51 +19,9 @@
 		<script type="text/javascript" src="js/html2canvas.min.js"></script>
 		<link rel="stylesheet" href="style/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP|Noto+Serif+JP" rel="stylesheet">
-		<script>
-			function reloadCheck() {
-				if (window.name != "reloadFlag") {
-					location.reload();
-					window.name = "reloadFlag";
-				}
-			}
-			
-			function markerfoundplane() {
-				document.querySelector('#plane').emit('markerfound')
-			}
-			AFRAME.registerComponent('registerevents', {
-				init: function () {
-            		var marker = this.el;
-				
-            		marker.addEventListener('markerFound', function () {
-                		var markerId = marker.id;
-                		document.querySelector('#cylinder').emit('markerfound');
-						setTimeout("markerfoundplane()", 3500);
-            		});
-
-            		marker.addEventListener('markerLost', function () {
-                		var markerId = marker.id;
-                		console.log('markerLost', markerId);
-
-                		document.querySelector('#cylinder').emit('markerlost');
-						document.querySelector('#plane').emit('markerlost');
-            		});
-        		}
-    		});
-		</script>
 	</head>
 	<body>
-		</div>
-		<a-scene embedded arjs='debugUIEnabled:false;' vr-mode-ui="enabled: false">
-			<a-marker preset="custom" type="pattern" url="pattern-marker.patt" registerevents>
-				<a-cylinder id="cylinder" radius="0.75" height="0.01" rotation="0 90 0" src="image/logo.jpeg">
-					<a-animation attribute="rotation" begin="markerfound" end="markerlost" from="0 90 0" to="0 90 180" repeat="3" easing="ease-out"></a-animation>
-					<a-animation attribute="material.opacity" begin="markerfound" end="markerlost" to="0" dur="3000" easing="ease-in"></a-animation>
-				</a-cylinder>
-				<a-plane id="plane" opacity="0" position="0 0.1 0" width="1.5" height="2.1" rotation="-90 0 0" material="shader: html; target: #poster">
-					<a-animation attribute="material.opacity" begin="markerfound" end="markerlost" from="0" to="1" easing="ease-out"></a-animation>
-				</a-plane>
-			</a-marker>
-			<div id="poster">
+		<div id="poster">
 			<h1 class="header">ARポスター</h1>
 			<h2 class="author">73回 object</h2>
 			<div class="maintext">
@@ -80,6 +38,11 @@
 					AR.js等を使ったWebでのARはARKit等を使ったネイティブアプリと比べて、アプリをインストールする必要がなく、Webサイトにアクセスするだけで体験できるという手軽さが利点です。
 				</p>
 			</div>
+		</div>
+		<a-scene embedded arjs='debugUIEnabled:false;' vr-mode-ui="enabled: false">
+			<a-marker preset="custom" type="pattern" url="pattern-marker.patt">
+				<a-plane width="1.5" height="2.1" rotation="-90 0 0" material="shader: html; target: #poster; fps: 60"></a-plane>
+			</a-marker>
 			<a-entity camera></a-entity>
 		</a-scene>
 	</body>
